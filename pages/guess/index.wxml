@@ -1,0 +1,15 @@
+<view class="container">
+    <view class="canvas_area">
+        <canvas canvas-id="guessCanvas" />
+    </view>
+    <view class="canvas_tools">
+        <radio-group class="radio-group" bindchange="radioChange">
+            <label class="radio" wx:for="{{items}}">
+                <radio value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+            </label>
+        </radio-group>
+        <view class="button-wrap">
+            <button>确 定</button>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,19 @@
+<!--pages/draw/index.wxml-->
+<view class="container" catchtouchmove="disMove">
+    <view class="qu">
+       <text>石头</text>
+    </view>
+    <view class="canvas_area">
+        <canvas canvas-id="drawCanvas" disableScroll="true" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd"
+        />
+    </view>
+    <view class="canvas_tools">
+        <button data-name="red" bindtap="bindViewTap">红</button>
+        <button data-name="black" bindtap="bindViewTap">黑</button>
+        <button data-name="blue" bindtap="bindViewTap">蓝</button>
+        <button data-name="size5" bindtap="bindViewTap">5</button>
+        <button data-name="size10" bindtap="bindViewTap">10</button>
+        <button data-name="rubber" bindtap="bindViewTap">{{isClear?"画":"橡皮"}}</button>
+        <button data-name="clear" bindtap="bindViewTap">清除</button>
+    </view>
+</view>

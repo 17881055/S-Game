@@ -1,0 +1,78 @@
+// out: ./index.wxss, compress: true, sourceMap: false
+// vscode 插件 easy wxless 将单个 less 文件编译成wxss文件的设置语句（设置语句一定放在文件最开头一行）
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.room {
+    margin: 20rpx 0;
+    min-height: 500rpx;
+    width: 90%;
+    background: #29b285;
+    border-radius: 15rpx;
+    .room-info-warp {
+        padding: 20rpx;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: #fff;
+        .room-num {
+            font-size: 32rpx;
+        }
+        .room-game {
+            font-size: 45rpx;
+            flex-grow: 1;
+            text-align: center;
+        }
+    }
+}
+
+.room-state {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100rpx;
+    color: #fff;
+    opacity: .5;
+    font-size: 50rpx;
+}
+
+.enter-button {
+    border-radius: 0 0 15rpx 15rpx;
+    margin: 20rpx 0 0;
+    font-size: 40rpx;
+    color: #fff;
+    background: #1f8563;
+}
+
+.member {
+    display: flex;
+    min-height: 170rpx;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20rpx 0;
+    .user {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 0;
+        align-items: center;
+        .user-avatar {
+            margin: 12rpx;
+            margin-bottom: 0;
+            width: 110rpx;
+            height: 110rpx;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+        .user-nickname {
+            display: flex;
+            align-content: center;
+            font-size: 25rpx;
+            color: #fff;
+        }
+    }
+}

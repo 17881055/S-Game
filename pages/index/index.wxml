@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<view class="bg"></view>
+<view class="could2"></view>
+<view class="container">
+  <view class="info">
+    <view class="user">
+      <image bindtap="bindViewTap" class="user-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="user-nickname">{{userInfo.nickName}}</text>
+    </view>
+    <view class="online">
+      <text >在线人数 {{online}}</text>
+      <button class="user-button" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 使用微信头像和昵称 </button>
+    </view>
+  </view>
+  <view class="usermotto">
+    <view class='block fa' data-name="rankings" bindtap="bindViewTap">排行榜</view>
+    <view class='block fb' data-name="lobby" bindtap="bindViewTap">
+      <view class="game-warp">
+        <view class="game-title">
+          <text>游戏</text>
+          <text>大厅</text>
+        </view>
+        <view class="game-online">游戏人数 {{num}}</view>
+      </view>
+    </view>
+    <view class='block fc' data-name="shop" bindtap="bindViewTap">商店</view>
+    <view class='block fd' data-name="interaction" bindtap="bindViewTap">好友互动</view>
+    <view class='block fe' data-name="setup" bindtap="bindViewTap">设置</view>
+  </view>
+</view>

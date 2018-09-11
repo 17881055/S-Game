@@ -1,0 +1,27 @@
+<!--pages/lobby/index.wxml-->
+<view class="container">
+    <block wx:for="{{rooms}}" wx:key="value" wx:for-item="room">
+        <view class="room">
+            <view class="room-info-warp">
+                <view class="room-num">房间 #{{room.num}}</view>
+                <view class="room-game">{{room.gameName}}</view>
+            </view>
+            <view class="room-state">
+                <block wx:if="{{room.gameState==0}}"> 等待中... </block>
+                <block wx:elif="{{room.gameState==1}}"> 游戏中 </block>
+                <block wx:else="{{room.gameState==2}}"> 结束 </block>
+            </view>
+            <view class="member">
+                <block wx:for="{{room.member}}" wx:key="num" wx:for-item="user">
+                    <view class="user">
+                        <image bindtap="bindViewTap" class="user-avatar" src="{{user.url}}" background-size="cover"></image>
+                        <text class="user-nickname">{{user.name}}</text>
+                    </view>
+                </block>
+            </view>
+            <block wx:if="{{!start}}">
+                <button class="enter-button" data-num="{{room.num}}" bindtap="bindViewTap">进入房间</button>
+            </block>
+        </view>
+    </block>
+</view>

@@ -1,0 +1,227 @@
+// out: ./index.wxss, compress: true, sourceMap: false
+// vscode 插件 easy wxless 将单个 less 文件编译成wxss文件的设置语句（设置语句一定放在文件最开头一行）
+/**index.wxss**/
+
+.container {
+    padding: 0;
+}
+
+.bg {
+    z-index: 0;
+    position: fixed;
+    border-radius: 0 0 110px 110px;
+    width: 100%;
+    height: 200rpx;
+    background: #29b284;
+}
+
+.could {
+    top: 0;
+    position: fixed;
+    margin: 120rpx 0 0;
+    opacity: 0.3;
+    animation: star-move 50s linear infinite;
+    width: 100%;
+    height: 1200rpx;
+    z-index: 0;
+}
+
+.info {
+    margin: 20px 0 0;
+    border-radius: 20rpx;
+    background: #05543a;
+    width: 76%;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    align-items: center;
+}
+
+.user-avatar {
+    width: 128rpx;
+    height: 128rpx;
+    border-radius: 50%;
+}
+
+.user-nickname {
+    display: flex;
+    align-content: center;
+    font-size: 30rpx;
+    color: #fff;
+}
+
+.online {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    color: #fff;
+}
+
+.user-button {
+    padding: 10rpx;
+    margin: 20rpx 0 0;
+    width: 220rpx;
+    height: 80rpx;
+    font-size: 30rpx;
+    line-height: 1;
+}
+
+.usermotto {
+    z-index: 0;
+    padding: 10px 20px;
+    width: 90%;
+    display: flex;
+    flex-flow: column wrap;
+    height: 900rpx;
+    overflow: hidden;
+}
+
+.game-warp {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.game-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.game-online {
+    display: flex;
+    color: #05543a;
+    font-size: 30rpx;
+}
+
+.block {
+    display: flex;
+    z-index: 1;
+    padding: 20rpx;
+    margin: 10rpx;
+    border-radius: 15rpx;
+    font-size: 45rpx;
+    width: 275rpx;
+    height: 240rpx;
+}
+
+view[data-name="rankings"] {
+    color: #fff;
+    background-color: #f1a532;
+    height: 220rpx;
+    animation: flash_a 4s ease 0s infinite alternate none;
+}
+
+view[data-name="lobby"] {
+    color: #fff;
+    height: 290rpx;
+    background-color: #29b285;
+}
+
+view[data-name="shop"] {
+    color: #fff;
+    height: 150rpx;
+    background-color: #b7eedc;
+}
+
+view[data-name="interaction"] {
+    color: #fff;
+    background-color: #29b285;
+    height: 430rpx;
+}
+
+view[data-name="setup"] {
+    color: #fff;
+    background-color: #05543a;
+    height: 290rpx;
+}
+
+.fa {
+    animation: flash_a 4s ease 0s infinite alternate none;
+}
+
+.fb {
+    animation: flash_b 5s ease 0s infinite alternate none;
+}
+
+.fc {
+    animation: flash_c 9s ease 0s infinite alternate none;
+}
+
+.fd {
+    animation: flash_d 9s ease 0s infinite alternate none;
+}
+
+.fe {
+    animation: flash_c 10s ease 0s infinite alternate none;
+}
+
+/* export keyframes  */
+
+@keyframes flash_a {
+    from,
+    50%,
+    to {
+        opacity: 1;
+    }
+    25%,
+    75% {
+        opacity: 0.7;
+    }
+}
+
+@keyframes flash_b {
+    from,
+    50%,
+    to {
+        opacity: 1;
+    }
+    25%,
+    75% {
+        opacity: 0.9;
+    }
+}
+
+@keyframes flash_c {
+    from,
+    to {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+@keyframes flash_d {
+    from,
+    to {
+        opacity: 1;
+    }
+    25%,
+    90% {
+        opacity: 0.9;
+    }
+    50%,
+    75% {
+        opacity: 0.8;
+    }
+}
+
+@keyframes star-move {
+    from {
+        background-position: 0% 0%;
+    }
+    to {
+        background-position: 300% 0%;
+    }
+}

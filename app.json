@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/draw/index",
+    "pages/guess/index",
+    "pages/lobby/index",
+    "pages/room/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#29B284",
+    "navigationBarTitleText": "s-Game",
+    "navigationBarTextStyle": "white",
+    "backgroundTextStyle": "light"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

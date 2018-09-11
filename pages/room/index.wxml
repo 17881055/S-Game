@@ -1,0 +1,26 @@
+<!--pages/lobby/index.wxml-->
+<view class="container">
+    <view class="bg"></view>
+    <view class="room">
+        <view class="room-num">房间 #{{num}}</view>
+        <view class="room-name">{{name}}</view>
+        <view >
+            <view class="draw-wrap">
+                <label>我要画</label>
+                 <view class="draw-member">
+                    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+                </view>
+                <button data-name="draw" data-room="room_1" type="primary" bindtap="bindViewTap">加入</button>
+               
+            </view>
+            <view class="guess-wrap">
+                <label>我要猜</label>
+                 <view class="guess-member">
+                    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+                </view>
+                <button data-name="guess" type="primary" bindtap="bindViewTap">加入</button>
+               
+            </view>
+        </view>
+    </view>
+</view>
